@@ -1,105 +1,169 @@
 @import 'variables.scss';
 
 nav{
-    display: flex;
-    justify-content: space-between;
-    
-    div{
-        width: 33.33%;
-    }
-    .left{
+    position:sticky;
+    top:0;
+    .main{
         display: flex;
-        ul{
-            display: flex;
-            align-items: center;
-            list-style: none;
-            height: 80px;
-            margin-left: 45px;
-            font-weight: bold;
-
-            li{
-                margin-right: 20px;
-                cursor: pointer;
-
-                a{
-                    color: #333;
-                    font-size: 14px;
-                    &:hover{
-                        transition: 200ms ease-in-out;    
-                    }
-                }
-                span{
-                    width: 0%;
-                    display: block;
-                    background: black;
-                    height: 2px;
-                    padding: 3px auto;
-                    animation: out 300ms;
-                }
-                &:hover > span {
-                    animation: in 300ms forwards; 
-                }
-                @keyframes in {
-                    from { width: 0%; }
-                    to { width: 100%;}
-                }
-                @keyframes out {
-                    from  { width: 100%; }
-                    to { width: 0%; }
-                }
-            }
-
+        justify-content: space-between;
+        // border-top: 1px black solid;
+        border-bottom: 1px black solid;
+        height: 80px;
+        width: 100%;
+        div{
+            width: 33.33%;
         }
-    }
-    
-    .center{
-        text-align: center;
-        align-self: center;
-    }
-    .right{
-        display: flex;
-        ul{
+        .left{
             display: flex;
-            align-items: center;
-            list-style: none;
-            margin-left: 45px;
-            font-weight: bold;
-            width: 100%;
-            justify-content: flex-end;
-            li{
-                margin-right: 20px;
-                cursor: pointer;
-                
-                a{
-                    color: #333;
-                    font-size: 14px;
-                    &:hover{
-                        transition: 200ms ease-in-out;    
+            ul{
+                display: flex;
+                align-items: center;
+                list-style: none;
+                margin-left: 45px;
+                font-weight: bold;
+    
+                li{
+                    margin-right: 20px;
+                    cursor: pointer;
+    
+                    a{
+                        color: #333;
+                        font-size: 14px;
+                        &:hover{
+                            transition: 200ms ease-in-out;    
+                        }
+                    }
+                    span{
+                        width: 0%;
+                        display: block;
+                        background: black;
+                        height: 2px;
+                        padding: 3px auto;
+                        animation: out 300ms;
+                    }
+                    &:hover > span {
+                        animation: in 300ms forwards; 
+                    }
+                    
+                    @keyframes in {
+                        from { width: 0%; }
+                        to { width: 100%;}
+                    }
+                    @keyframes out {
+                        from  { width: 100%; }
+                        to { width: 0%; }
                     }
                 }
-                span{
-                    width: 0%;
-                    display: block;
-                    height: 2px;
-                    padding: 3px auto;
-                    animation: out 300ms;
-                }
-                &:hover > span {
-                    animation: in 300ms forwards; 
-                }
-                @keyframes in {
-                    from { width: 0%; }
-                    to { width: 100%;}
-                }
-                @keyframes out {
-                    from  { width: 100%; }
-                    to { width: 0%; }
-                }
+    
             }
-
-            //Align items in right of the navbar
-            
         }
         
+        .center{
+            text-align: center;
+            align-self: center;
+            width: fit-content;
+        }
+        .right{
+            display: flex;
+            .navBtn{
+                display: none;
+                
+            }
+            ul{
+                display: flex;
+                align-items: center;
+                list-style: none;
+                // margin-left: 45px;
+                font-weight: bold;
+                width: 100%;
+                justify-content: flex-end;
+    
+                li{
+                    margin-right: 20px;
+                    cursor: pointer;
+                    
+                    a{
+                        color: #333;
+                        font-size: 14px;
+                        &:hover{
+                            transition: 200ms ease-in-out;    
+                        }
+                    }
+                    span{
+                        width: 0%;
+                        display: block;
+                        height: 2px;
+                        padding: 3px auto;
+                        animation: out 300ms;
+                    }
+                    &:hover > span {
+                        animation: in 300ms forwards; 
+                    }
+                    @keyframes in {
+                        from { width: 0%; }
+                        to { width: 100%;}
+                    }
+                    @keyframes out {
+                        from  { width: 100%; }
+                        to { width: 0%; }
+                    }
+                }
+            }   
+        }
+    
+        @media screen and (max-width: 600px) 
+        {
+            .left {display: none;}
+            .center{
+                text-align: left;
+                margin-left: 30px;
+            }
+            .right{
+                .navBtn{
+                    display: flex;
+                    width: 100%;
+                    align-items: center;
+                    justify-content: flex-end;
+                    margin-right: 30px;
+                }
+                ul{
+                    display:none;
+                }
+            }
+        }
+    
+    }
+    &:hover > .fullNav {
+        display: flex; 
+        justify-content: space-between;
+        // background-color: red;
+    }
+    .fullNav{
+        display: none;
+        justify-content: space-between;
+        position: absolute;
+        width: 100%;
+        z-index: 1;
+        div{
+            width: 50%;
+        }
+        .left{
+            background: #e7e5dd;
+            display: flex;
+            div{
+                &:first-child{
+                    padding-left: 45px;
+                }
+                padding: 50px 0;
+                width: 33.33%;
+                ul{
+                    list-style: none;
+                }
+            }
+        }
+    
+        .right{
+    
+        }
     }
 }
