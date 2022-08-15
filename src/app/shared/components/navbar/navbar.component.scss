@@ -3,6 +3,7 @@
 nav{
     position:sticky;
     top:0;
+    background-color: $primary-color;
     .main{
         display: flex;
         justify-content: space-between;
@@ -81,7 +82,7 @@ nav{
                 li{
                     margin-right: 20px;
                     cursor: pointer;
-                    
+    
                     a{
                         color: #333;
                         font-size: 14px;
@@ -92,6 +93,7 @@ nav{
                     span{
                         width: 0%;
                         display: block;
+                        background: black;
                         height: 2px;
                         padding: 3px auto;
                         animation: out 300ms;
@@ -99,6 +101,7 @@ nav{
                     &:hover > span {
                         animation: in 300ms forwards; 
                     }
+                    
                     @keyframes in {
                         from { width: 0%; }
                         to { width: 100%;}
@@ -137,6 +140,11 @@ nav{
         display: flex; 
         justify-content: space-between;
         // background-color: red;
+        animation: showNav 300ms forwards; 
+        @keyframes showNav {
+            from { opacity: 0%; }
+            to { opacity: 100%;}
+        }
     }
     .fullNav{
         display: none;
@@ -158,12 +166,19 @@ nav{
                 width: 33.33%;
                 ul{
                     list-style: none;
+                    li{
+                        margin-top: 10px;
+                    }
                 }
             }
         }
     
         .right{
-    
+            display: flex;
+            background-color: $primary-color;
+            app-product-item{
+                padding: 30px 0;
+            }
         }
     }
 }

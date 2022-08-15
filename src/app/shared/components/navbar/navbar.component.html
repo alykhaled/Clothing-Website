@@ -17,7 +17,8 @@
             </ul>
         </div>
         <div class="center">
-            <h2>OVERTHESEA</h2>
+            <a [routerLink]="['/']" routerLinkActive="router-link-active"><h2>OVERTHESEA</h2></a>
+            
         </div>
         <div class="right">
             <div class="navBtn">
@@ -27,10 +28,16 @@
             </div>
             <ul>
                 <li>
-                    <a routerLink="/home">ENG</a>
+                    <a routerLink="/login">SIGN IN</a>
+                    <span></span>
                 </li>
                 <li>
-                    <a routerLink="/home">CART</a>
+                    <a routerLink="/home">ENG</a>
+                    <span></span>
+                </li>
+                <li>
+                    <a routerLink="/home">CART (1)</a>
+                    <span></span>
                 </li>
             </ul>
         </div>
@@ -40,33 +47,33 @@
             <div>
                 <h4>COLLECTIONS</h4>
                 <ul>
-                    <li>Lorem</li>
-                    <li>Lorem</li>
-                    <li>Lorem</li>
-                    <li>Lorem</li>
+                    <li>PHENOMENON</li>
+                    <li>ILLYLLUM</li>
+                    <li>30 FEELINGS</li>
+                    <li>PHANTOM ISLAND</li>
+                    <li>ELEMENTS</li>
                 </ul>
             </div>
             <div>
-                <h4>COLLECTIONS</h4>
+                <h4>CATEGORIES</h4>
                 <ul>
-                    <li>Lorem</li>
-                    <li>Lorem</li>
-                    <li>Lorem</li>
-                    <li>Lorem</li>
+                    <li>DRESSES</li>
+                    <li>SKIRTS</li>
+                    <li>PANTS</li>
+                    <li>TOPS</li>
                 </ul>
             </div>
             <div>
-                <h4>COLLECTIONS</h4>
+                <h4>STYLES</h4>
                 <ul>
-                    <li>Lorem</li>
-                    <li>Lorem</li>
-                    <li>Lorem</li>
-                    <li>Lorem</li>
+                    <li>BOHO</li>
+                    <li>VINTAGE</li>
                 </ul>
             </div>
         </div>
         <div class="right">
-            fsd
+            <app-product-item ></app-product-item>
+            <app-product-item ></app-product-item>
         </div>
     </div>
 </nav>
