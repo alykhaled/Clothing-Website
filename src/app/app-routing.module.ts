@@ -7,6 +7,7 @@ const routes: Routes = [
   {path:"login",component:LoginComponent},
   {path:"register",component:RegisterComponent},
   {path:"product", loadChildren: () => import('./modules/product/product.module').then((m) => m.ProductModule)},
+  {path:"products", loadChildren: () => import('./modules/products/products.module').then((m) => m.ProductsModule)},
   
 ];
 
