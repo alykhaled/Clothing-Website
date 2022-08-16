@@ -1,0 +1,33 @@
+.productDetail{
+    .mainDetails{
+        display: flex;
+        margin-top: 80px;
+        .productImage{
+            width: 50%;
+            text-align: center;
+            img{
+                width: 500px;
+            }
+        }
+        .details{
+            width: 50%;
+            button{
+                background: black;
+                color: white;
+                font-weight: lighter;
+            }
+            p{
+                margin: 20px 0;
+            }
+            .sizes{
+                display: flex;
+            }
+        }
+    }
+    h1{
+        text-align: center;
+    }
+    .recommendations{
+        display: flex;
+    }
+}

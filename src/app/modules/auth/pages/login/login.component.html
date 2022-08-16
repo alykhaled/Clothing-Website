@@ -5,9 +5,11 @@
     <div class="center">
         <h1>SIGN IN</h1>
         <p>Don't have an account? <a [routerLink]="['/register']" href="">Sign Up</a></p>
-        <input type="text" name="" id="" placeholder="e-mail">
-        <input type="text" name="" id="" placeholder="password">
-        <button>LOG IN</button>
+        <form [formGroup]="loginForm" (ngSubmit)="login()">
+            <input type="text" formControlName="email" id="email" placeholder="e-mail" type="email">
+            <input type="text" formControlName="password" id="password" placeholder="password" type="password">
+            <button [type]="'submit'">LOG IN</button>
+        </form>
         <a href="">Forgot your password?</a>
     </div>
     <div class="right">

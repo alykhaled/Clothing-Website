@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import * as fromComponents from './pages/';
 import { ProductRoutingModule } from './product-routing.module';
-import { BrowserModule } from '@angular/platform-browser';
+import { SharedModule } from '@shared/shared.module';
 
 
 
@@ -13,8 +13,8 @@ import { BrowserModule } from '@angular/platform-browser';
   ],
   imports: [
     CommonModule,
-    BrowserModule,
-    ProductRoutingModule
+    ProductRoutingModule,
+    SharedModule
   ]
 })
 export class ProductModule { }
