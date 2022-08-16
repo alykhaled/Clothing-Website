@@ -1,0 +1,81 @@
+.homePage{
+    .homeHeader{
+        display: flex;
+        text-align: center;
+        justify-content: space-between;
+        align-items: center;
+        height: 600px;
+        background-position: center;
+        h1{
+            color: white;
+        }
+        .left{
+            display: flex;
+            height: 100%;
+            width: 50%;
+            background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url(https://w0.peakpx.com/wallpaper/485/437/HD-wallpaper-pattern-red-rose-retro-texture-flower-pink-blue-vintage.jpg);
+            background-color: red;
+            background-position: center;
+            border-radius: 0 0 0 100px ;
+            background-repeat: no-repeat;
+            background-size: cover;
+            align-items: center;
+            justify-content: center;
+        }
+        .right{
+            border-radius: 0 100px 0 0 ;
+            height: 100%;
+            width: 50%;
+            background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url(../../../../assets/images/item.png);
+            background-color: blue;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center top;
+        }
+    }
+    .newCollection{
+        margin-top: 60px;
+        .items{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            app-product-item{
+                // margin-top: 30p/x;
+                margin: 30px 30px;
+            }
+        }
+        h1{
+            text-align: center;
+        }
+    }
+    .categories{
+        .items{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            .category{
+                // margin-left: 50px;
+                margin: 30px 30px;
+                display: flex;
+                flex-direction: column;
+                width: 200px;
+                height: 100%;
+                cursor: pointer;
+                transition: all 0.3s ease-in-out;
+                &:hover{
+                    transform: scale(1.02);
+                }
+                
+                .details{
+                    display: flex;
+                    justify-content: space-between;
+                    font-weight: bold;
+                    margin-top: 10px;
+                }
+            }
+        }
+        h1{
+            text-align: center;
+        }
+    }
+}

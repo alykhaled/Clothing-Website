@@ -1,0 +1,26 @@
+.productsPage{
+    .productsHeader{
+        display: flex;
+        text-align: center;
+        justify-content: space-around;
+        align-items: center;
+        height: 280px;
+        border-radius: 0 130px 0 0 ;
+        background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url(https://w0.peakpx.com/wallpaper/485/437/HD-wallpaper-pattern-red-rose-retro-texture-flower-pink-blue-vintage.jpg);
+        background-position: center;
+        h1{
+            color: white;
+        }
+    }
+    .productsList{
+        .items{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            app-product-item{
+                // margin-top: 30p/x;
+                margin: 30px 30px;
+            }
+        }
+    }
+}

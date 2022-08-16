@@ -9,7 +9,7 @@ export class TokenInterceptor implements HttpInterceptor {
     
     intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
         req = req.clone({
-            headers:  req.headers.append('Access-Control-Allow-Origin',`http://localhost:4200`),
+            headers:  req.headers.append('Authorization',`Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJraGFsaWRtYW1kb3U3QGdtYWlsLmNvbSIsImV4cCI6MTY2MDcxNzA1MywiaWF0IjoxNjYwNjgxMDUzfQ.hWLrx6WPCHu3OQ0JGEv-D3cNuqZcxY17szlU0Cdf3yU`),
         });
         return next.handle(req);
     }
