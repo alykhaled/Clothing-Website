@@ -7,6 +7,7 @@ export interface ProductData {
     name: string;
     price: number;
     image: string;
+    description: string;
     size: Sizes;
     color: Colors;
     category: Categories;

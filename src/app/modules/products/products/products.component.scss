@@ -1,8 +1,8 @@
 .productsPage{
     .productsHeader{
-        display: flex;
+        // display: flex;
         text-align: center;
-        justify-content: space-around;
+        // justify-content: space-around;
         align-items: center;
         height: 280px;
         border-radius: 0 130px 0 0 ;
@@ -14,9 +14,9 @@
     }
     .productsList{
         .items{
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
+            // display: flex;
+            // flex-wrap: wrap;
+            // justify-content: space-around;
             app-product-item{
                 // margin-top: 30p/x;
                 margin: 30px 30px;

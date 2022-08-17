@@ -1,12 +1,12 @@
 <div class="productDetail">
-    <div class="mainDetails">
-        <div class="productImage">
-            <img class="productImage" src="../../../../assets/images/item.png" alt="">
+    <div class="mainDetails row">
+        <div class="productImage col-md">
+            <img class="productImage" src="{{data.image}}" alt="">
         </div>
-        <div class="details">
-            <h1>Muse Dress</h1>
-            <p>$ 6,160.00</p>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci nobis dolor perferendis repellat. Molestias maxime quibusdam consequuntur ab eos similique nihil eaque cumque nam. Quae inventore porro blanditiis dicta reiciendis?</p>
+        <div class="details col-md">
+            <h1>{{data.name}}</h1>
+            <p>$ {{data.price}}</p>
+            <p>{{data.description}}</p>
             <button>ADD TO CART</button>
             <p>Sizes</p>
             <div class="sizes">

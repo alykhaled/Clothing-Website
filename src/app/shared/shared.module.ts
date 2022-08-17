@@ -16,6 +16,7 @@ import { ProductItemComponent } from './components/product-item/product-item.com
   ],
   imports: [
     FontAwesomeModule,
+    CommonModule,
     RouterModule
   ],
 })

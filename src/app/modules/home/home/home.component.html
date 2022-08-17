@@ -10,9 +10,7 @@
     <div class="newCollection">
         <h1>New Collections</h1>
         <div class="items">
-            <app-product-item></app-product-item>
-            <app-product-item></app-product-item>
-            <app-product-item></app-product-item>
+            <app-product-item class='col'*ngFor="let item of productsData" [data]="item" ></app-product-item>
         </div>
     </div>
     <div class="categories">

@@ -6,29 +6,8 @@
         <div class="options">
 
         </div>
-        <div class="items">
-            <app-product-item></app-product-item>
-            <app-product-item></app-product-item>
-            <app-product-item></app-product-item>
-            <app-product-item></app-product-item>
-            <app-product-item></app-product-item>
-            <app-product-item></app-product-item>
-            <app-product-item></app-product-item>
-            <app-product-item></app-product-item>
-            <app-product-item></app-product-item>
-            <app-product-item></app-product-item>
-            <app-product-item></app-product-item>
-            <app-product-item></app-product-item>
-            <app-product-item></app-product-item>
-            <app-product-item></app-product-item>
-            <app-product-item></app-product-item>
-            <app-product-item></app-product-item>
-            <app-product-item></app-product-item>
-            <app-product-item></app-product-item>
-            <app-product-item></app-product-item>
-            <app-product-item></app-product-item>
-            <app-product-item></app-product-item>
-            <app-product-item></app-product-item>
+        <div class="items row">
+            <app-product-item class='col'*ngFor="let item of productsData" [data]="item" ></app-product-item>
         </div>
     </div>
 </div>

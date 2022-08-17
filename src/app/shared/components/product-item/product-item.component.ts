@@ -7,7 +7,7 @@ import { ProductData } from '@core/models/interfaces/product-data';
   styleUrls: ['./product-item.component.scss']
 })
 export class ProductItemComponent{
-  @Input() data: ProductData | undefined;
+  @Input() data: ProductData;
   // @Output() readMoreAction = new EventEmitter();
 
 }

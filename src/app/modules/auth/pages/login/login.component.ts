@@ -36,6 +36,7 @@ export class LoginComponent implements OnInit {
     };
     this.authenticationService.authenticate(data, true).subscribe((response) => {
       console.log(response);
+      location.reload();
     })
   }
 }
