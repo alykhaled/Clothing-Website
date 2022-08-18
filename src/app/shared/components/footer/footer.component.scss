@@ -1,15 +1,30 @@
+
 footer{
-    .socialMediaIcons{
-        display: flex;
-        align-items: center;
-        margin-bottom: 1rem;
-        justify-content: center;
-        fa-icon{
-            margin-left: 1rem;
+    a{
+        text-decoration: none;
+    }
+    ul{
+        list-style: none;
+        padding: 0;
+    }
+
+    hr{
+        // margin-bottom: 5%;
+        background-color: black;
+        padding: 1px;
+        border: none;
+        z-index: -2;
+    }
+    .container{
+        width: 85%;
+        margin: auto;
+        input{
+            width: 100%;
+            margin: 5px 0;
+        }
+        button{
+            width: 100%;
         }
     }
-    .copyrights{
-        padding: 1rem;
-        text-align: center;
-    }
+
 }

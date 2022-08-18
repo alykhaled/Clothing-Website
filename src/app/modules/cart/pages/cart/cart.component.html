@@ -1,19 +1,24 @@
-<div class="container">
+<div class="containerr">
     <p class="cart-text">Cart</p>
-    <div class="product-container">
+    <div class="product-container" *ngFor="let item of productsData">
         <!-- image -->
-        <div class="img-container">
-            <img src="../../../../../assets/images/item.png" alt="">
+        <div class="cont">
+            <div class="img-container">
+                <img src="{{item.image}}" alt="">
+            </div>
+            <!-- info -->
+            <div class="details">
+                <p>{{item.name}}</p>
+                <p>$ {{item.price}}</p>
+            </div>
         </div>
-        <!-- info -->
-        <div class="">
-            <p>Rolling Tray Bundle </p>
-            <p>$53.94</p>
+        <div class="removeBtn">
+            <button (click)="removeItem(item.id)">REMOVE</button>
         </div>
     </div>
     <div class="dis-flex">
         <p>Total</p>
-        <p>$53.94</p>
+        <p>$ {{totalPrice}}</p>
     </div>
     <div class="center">
         <button>CHECK OUT</button>

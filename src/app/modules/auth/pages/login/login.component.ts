@@ -34,7 +34,7 @@ export class LoginComponent implements OnInit {
       email: this.emailField!.value,
       password: this.passwordField!.value,
     };
-    this.authenticationService.authenticate(data, true).subscribe((response) => {
+    this.authenticationService.login(data).subscribe((response) => {
       console.log(response);
       location.reload();
     })

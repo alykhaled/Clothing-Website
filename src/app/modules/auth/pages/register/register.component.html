@@ -1,18 +1,42 @@
 <div class="register">
-    <div class="left">
-        <img src="../../../../assets/images/item.png" alt="">
-    </div>
-    <div class="center">
+ 
+    <div class="content">
         <h1>Sign Up</h1>
         <p>Already have an account? <a [routerLink]="['/login']"  href="">Sign In</a></p>
-        <input type="text" name="" id="" placeholder="Full Name">
-        <input type="text" name="" id="" placeholder="e-mail">
-        <input type="text" name="" id="" placeholder="password">
-        <input type="text" name="" id="" placeholder="repeat password">
-        <input type="checkbox" name="" id="">
-        <button>Sign Up</button>
+        <form [formGroup]="registerForm" (ngSubmit)="register()">
+            <div class="form-group">
+                <input type="text" formControlName="fullname" id="" name="fullname" placeholder="Full Name" [ngClass]="{ 'is-invalid': submitted && nameField!.errors }">
+                <div *ngIf="nameField!.invalid" class="invalid-feedback">
+                  <div>Fullname is required</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="text" formControlName="email" id="" placeholder="e-mail" [ngClass]="{ 'is-invalid': submitted && emailField!.errors }">
+                <div *ngIf="submitted && emailField!.invalid" class="invalid-feedback">
+                  <div >Email is required</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="text" formControlName="password" id="" placeholder="password" type="password" [ngClass]=" { 'is-invalid': submitted && passwordField!.errors }">
+                <div *ngIf="submitted && passwordField!.errors" class="invalid-feedback">
+                  <div>Password is required</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="text" formControlName="repeatPassword" id="" placeholder="repeat password" type="password" [ngClass]="{ 'is-invalid': submitted && passwordRepeatField!.errors }">
+                <div *ngIf="submitted && passwordRepeatField!.errors" class="invalid-feedback">
+                  <div>Repeat password is required</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="checkbox" formControlName="termsField" id="" name="terms" [ngClass]="{ 'is-invalid': submitted && termsField!.errors }">
+                <p>Terms and conditions</p>
+                <div *ngIf="submitted && termsField!.errors" class="invalid-feedback">
+                  <div>You have to accept our terms and conditions</div>
+                </div>
+            </div>
+            <button [type]="'submit'">Sign Up</button>
+        </form>
     </div>
-    <div class="right">
-        <img src="../../../../assets/images/item.png" alt="">
-    </div>
+
 </div>

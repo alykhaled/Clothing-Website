@@ -1,25 +1,39 @@
 <div class="homePage">
     <div class="homeHeader">
         <div class="left">
-            <h1>Products</h1>
+            <h1>Welcome</h1>
         </div>
         <div class="right">
             
         </div>
     </div>
-    <div class="newCollection">
+    <div class="newCollection container">
         <h1>New Collections</h1>
-        <div class="items">
-            <app-product-item class='col'*ngFor="let item of productsData" [data]="item" ></app-product-item>
+        <div class="items row">
+            <app-product-item class='col'*ngFor="let item of productsData " [data]="item" ></app-product-item>
         </div>
     </div>
     <div class="categories">
         <h1>Categories</h1>
         <div class="items">
-            <div *ngFor="let item of [1,2,3,4]" class="category">
+            <div class="category">
                 <div class="details">
                     <p>Dress</p>
                     <p>01</p>
+                </div>
+                <img src="../../../../assets/images/item.png" alt="">
+            </div>
+            <div class="category">
+                <div class="details">
+                    <p>Top</p>
+                    <p>02</p>
+                </div>
+                <img src="../../../../assets/images/item.png" alt="">
+            </div>
+            <div class="category">
+                <div class="details">
+                    <p>Pants</p>
+                    <p>03</p>
                 </div>
                 <img src="../../../../assets/images/item.png" alt="">
             </div>

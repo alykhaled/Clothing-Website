@@ -11,4 +11,5 @@ export interface ProductData {
     size: Sizes;
     color: Colors;
     category: Categories;
+    addedToCart: boolean;
 }

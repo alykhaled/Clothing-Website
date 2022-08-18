@@ -1,43 +1,15 @@
-.register{
+ .register{
     display: flex;
-    justify-content: space-between;
-    // height: 80px;
-    div{
-        width: 33.33% !important;
-    }
-    img{
-        width: 100%;
-    }
-    .center{
+    // align-items: center;
+    justify-content: center;
+    // height: 100vh;
+    .content{
+        margin-top: 40px !important;
         text-align: center;
-        align-self: center;
-        width: fit-content;
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        input {
-             
-            padding: 12px 20px;
-            margin: 8px 60px;
-            box-sizing: border-box;
-            background: transparent;
-            border: 0;
-            border: 1px black solid;
-            outline:0;
-        }
-        button{
-            padding: 12px 20px;
-            margin: 8px 60px;
-            box-sizing: border-box;    
-            background: transparent;
-            border: 0;
-            border: 1px black solid;
-            outline:0;
-        }
-        h1{
-            font-weight: lighter;
-            font-size: 50px;
+        // width: 33.33%;
+        button, input{
+            width: 100%;
+            margin: 5px 0 !important; 
         }
     }
-
-}
+ }

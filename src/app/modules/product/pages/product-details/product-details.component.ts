@@ -13,6 +13,7 @@ export class ProductDetailsComponent implements OnInit {
   id: number;
   private sub: any;
   data: ProductData;
+  recommendedProducts:any = [];  
 
   constructor(private route: ActivatedRoute, private productService: ProductsService) {}
 
@@ -20,6 +21,7 @@ export class ProductDetailsComponent implements OnInit {
     this.sub = this.route.params.subscribe(params => {
        this.id = +params['id']; 
        this.getProduct(this.id);
+       this.getProducts();
     });
   }
   getProduct(id:number)
@@ -28,7 +30,22 @@ export class ProductDetailsComponent implements OnInit {
       this.data = response;
     });
   }
+  addToCart()
+  {
+    console.log("fsd");
+    this.productService.addToCart(this.id).subscribe((response) => {
+      location.reload();
+    });
+  }
   ngOnDestroy() {
     this.sub.unsubscribe();
+  }
+  getProducts()
+  {
+    this.productService.getProducts().subscribe((response) => {
+      this.recommendedProducts = response;
+      this.recommendedProducts = this.recommendedProducts.slice(1,4);
+      console.log(response);
+    })
   }
 }

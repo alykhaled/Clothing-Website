@@ -18,6 +18,7 @@ export class HomeComponent implements OnInit {
   {
     this.productsService.getProducts().subscribe((response) => {
       this.productsData = response;
+      this.productsData = this.productsData.slice(1,4);
       console.log(response);
     })
   }

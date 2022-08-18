@@ -1,19 +1,21 @@
-.item{
-    // margin-left: 50px;
-    display: flex;
-    flex-direction: column;
-    width: 200px;
-    height: 100%;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-    &:hover{
-        transform: scale(1.02);
-    }
-    
-    .details{
+a{
+    .item{
+        // margin-left: 50px;
         display: flex;
-        justify-content: space-between;
-        font-weight: bold;
-        margin-top: 10px;
+        flex-direction: column;
+        width: 200px;
+        height: 100%;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        &:hover{
+            transform: scale(1.02);
+        }
+        margin: auto;    
+        .details{
+            display: flex;
+            justify-content: space-between;
+            font-weight: bold;
+            margin-top: 10px;
+        }
     }
 }

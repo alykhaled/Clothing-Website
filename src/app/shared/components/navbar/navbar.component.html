@@ -1,4 +1,4 @@
-<nav>
+<nav class="">
     <div class="main">
         <div class="left">
             <ul>
@@ -31,43 +31,62 @@
                     <a routerLink="/me">MY ACCOUNT</a>
                     <span></span>
                 </li>
-                <li>
-                    <a routerLink="/cart">CART (1)</a>
+                <li *ngIf="isLogged">
+                    <a routerLink="/cart">CART ({{cartSize}})</a>
                     <span></span>
                 </li>
             </ul>
         </div>
     </div>
-    <div id='fullNav' class="fullNav dropdown-menu">
-        <div class="left row">
-            <div class="col">
-                <h4>COLLECTIONS</h4>
-                <ul>
-                    <a routerLink="/products" ><li>PHENOMENON</li></a>
-                    <a routerLink="/products" ><li>ILLYLLUM</li></a>
-                    <a routerLink="/products" ><li>30 FEELINGS</li></a>
-                    <a routerLink="/products" ><li>PHANTOM ISLAND</li></a>
-                    <a routerLink="/products" ><li>ELEMENTS</li></a>
-                </ul>
-            </div>
-            <div class="col">
-                <h4>CATEGORIES</h4>
-                <ul>
-                    <li>DRESSES</li>
-                    <li>SKIRTS</li>
-                    <li>PANTS</li>
-                    <li>TOPS</li>
-                </ul>
-            </div>
-            <div class="col">
-                <h4>STYLES</h4>
-                <ul>
-                    <li>BOHO</li>
-                    <li>VINTAGE</li>
-                </ul>
+    <div class="fullNav row">
+        <div class="left col">
+            <div class="row " >
+                <div class="col">
+                    <h4>COLLECTIONS</h4>
+                    <ul>
+                        <a routerLink="/products" ><li>PHENOMENON</li></a>
+                        <a routerLink="/products" ><li>ILLYLLUM</li></a>
+                        <a routerLink="/products" ><li>30 FEELINGS</li></a>
+                        <a routerLink="/products" ><li>PHANTOM ISLAND</li></a>
+                        <a routerLink="/products" ><li>ELEMENTS</li></a>
+                    </ul>
+                </div>
+                <div class="col">
+                    <h4>CATEGORIES</h4>
+                    <ul>
+                        <a routerLink="/products/category/dresses"><li>DRESSES</li></a>
+                        <a routerLink="/products/category/skirts"><li>SKIRTS</li></a>
+                        <a routerLink="/products/category/pants"><li>PANTS</li></a>
+                        <a routerLink="/products/category/tops"><li>TOPS</li></a>
+                    </ul>
+                </div>
+                <div class="col actionFullNav">
+                    <h4>ACTIONS</h4>
+                    <ul>
+                        <li *ngIf="!isLogged">
+                            <a routerLink="/login">SIGN IN</a>
+                            <span></span>
+                        </li>
+                        <li *ngIf="isLogged">
+                            <a routerLink="/me">MY ACCOUNT</a>
+                            <span></span>
+                        </li>
+                        <li>
+                            <a routerLink="/cart">CART ({{cartSize}})</a>
+                            <span></span>
+                        </li>
+                    </ul>
+                </div>
+                <!-- <div class="col">
+                    <h4>STYLES</h4>
+                    <ul>
+                        <li>BOHO</li>
+                        <li>VINTAGE</li>
+                    </ul>
+                </div> -->
             </div>
         </div>
-        <div class="right">
+        <div class="right col">
             <app-product-item ></app-product-item>
             <app-product-item ></app-product-item>
         </div>

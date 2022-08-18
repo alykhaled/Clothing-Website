@@ -6,13 +6,16 @@
     <div class="options row">
         <div class="left col">
             <div class="ff row">
-                <button>Account Details</button>
-                <button>My Orders</button>
-                <button>Logout</button>
+                <!-- <button>Account Details</button> -->
+                <!-- <button>My Orders</button> -->
+                <button (click)="logout()">Logout</button>
             </div>
         </div>
         <div class="right col">
             <h3>You may also like</h3>
+            <div class="recommendations">
+                <app-product-item class='col'*ngFor="let item of recommendedProducts " [data]="item" ></app-product-item>
+            </div>
         </div>
     </div>
 </div>
